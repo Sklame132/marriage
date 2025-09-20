@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <title>Александр & Валерия</title>
+</head>
+<body>
+    <div class="glass-container glass container">
+        <div class="smooth-wrapper">
+                <div class="smooth-content">
+
+
+                    <header class="header">
+                            <div class="header__logo-wrapper" data-speed="clamp(.7)">
+                                <img class="header__logo" src="./assets/logo.svg" />
+                                <p class="header__logo-text">Александр & Валерия</p>
+                            </div>
+                            <h1 class="header__text-title" id="guests" data-speed="clamp(.8)"></h1>
+                            <p class="header__text" data-speed="clamp(.8)">Мы рады Вам сообщить, что <b class="header__text-date accent">11.11.2024</b> мы официально зарегистрируем наши отношения и хотим разделить этот день с самыми близкими!</p>
+                    </header>
+
+                    <img class="separator" src="./assets/separator.svg" data-speed="clamp(.7)" />
+
+                    <main class="main" data-speed="clamp(.8)">
+                            <div class="main__text-wrapper">
+                                <form action="#" class="main__form" id="form">
+                                    <fieldset class="main__fieldset">
+                                        <legend class="main__fieldset-title">План действий</legend>
+                                        <div class="main__fieldset-wrapper">
+                                            
+                                            <div class="main__fieldset__item">
+                                                <input class="main__fieldset__item-input" id="checkbox-1" type="checkbox" value="Регистрация">
+                                                <label class="main__fieldset__item-label" for="checkbox-1">
+                                                    <p><b class="time accent">12:00</b>Регистрация в Новоусманском ЗАГС, улица Ленина дом <b>278</b></p>
+                                                </label>
+                                            </div>
+
+                                            <div class="main__fieldset__item">
+                                                <input class="main__fieldset__item-input" id="checkbox-2" type="checkbox" value="Венчание">
+                                                <label class="main__fieldset__item-label" for="checkbox-2">
+                                                    <b class="time accent">13:00</b> Венчание в Храме Всемилостивого Спаса, улица <b>20</b> лет ВЛКСМ, <b>3а/1</b>
+                                                </label>
+                                            </div>
+
+                                            <div class="main__fieldset__item">
+                                                <input class="main__fieldset__item-input hide" type="checkbox">
+                                                <p><b class="time accent">14:00-16:00</b> Фотосессия Жениха и Невесты</p>
+                                            </div>
+
+                                            <div class="main__fieldset__item">
+                                                <input class="main__fieldset__item-input" id="checkbox-3" type="checkbox" value="Кафе">
+                                                <label class="main__fieldset__item-label" for="checkbox-3">
+                                                    <b class="time accent">17:00</b> Начало празднования в кафе «Паруса», Арзамасская улица, <b>4л</b>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <button class="main__fieldset-button glass" type="submit" value="Send">Отправить</button>
+                                        <p class="main__fieldset__end-text hide">Спасибо, будем рады вас видеть!</p>
+                                    </fieldset>
+                                </form>
+                            </div>
+                    </main>
+
+                    <img class="separator" src="./assets/separator.svg" data-speed="clamp(.7)" />
+
+                    <section class="conclusion" data-speed="clamp(.8)">
+                        <img class="conclusion__photo" id="photo_1" src="./assets/photo1.jpeg" />
+                        <div class="conclusion__text-wrapper glass">
+                            <h1 class="conclusion__text">Просим вас выбрать место(а), которые хотели бы посетить.</h1>
+                            <h1 class="conclusion__text">Будем очень рады видеть Вас на нашем мероприятии!</h1>
+                        </div>
+                        <img class="conclusion__photo" id="photo_2" src="./assets/photo2.jpeg" />
+                    </section>
+
+                    <img class="separator" src="./assets/separator.svg" data-speed="clamp(.7)" />
+
+                    <footer class="footer" data-speed="clamp(.8)">
+                            <h1 class="footer_map-title">Местоположение</h1>
+                            <div id="map" class="footer_map"></div>
+                    </footer>
+
+                </div>
+        </div>
+    </div>
+
+    <script src="./scripts/libs/gsap.min.js"></script>
+    <script src="./scripts/libs/ScrollTrigger.min.js"></script>
+    <script src="./scripts/libs/ScrollSmoother.min.js"></script>
+    <script src="./scripts/libs/ScrambleTextPlugin.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a099a70-1661-4a13-a1ff-26243989518a&lang=ru_RU"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./scripts/index.js" type="module"></script>
+</body>
+</html>

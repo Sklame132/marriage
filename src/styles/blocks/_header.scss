@@ -1,0 +1,48 @@
+@use "../helpers" as *; 
+
+.header {
+    font-family: var(--font-family-header);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 800px;
+
+    &__logo {
+            width: 200px;
+            height: 200px;
+    
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                border-radius: 2rem;
+                padding: 20px;
+                z-index: 5;
+                margin-bottom: 70px;
+            }
+
+            &-text {
+                @include fluid-text(32, 16);
+                margin-top: 5px;
+                font-family: 'Miama';
+                letter-spacing: .02rem;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+        }
+    
+        &__text {
+            text-align: center;
+            @include fluid-text(48, 20);
+
+            @include mobile {
+                width: 170%;
+            }
+
+            &-title {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+}

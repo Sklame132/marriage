@@ -1,0 +1,58 @@
+@use "../helpers" as *;
+
+.conclusion {
+    @include fluid-text(86, 18);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 900px;
+
+    &__text{
+        padding: 0;
+        margin: 0;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            border-radius: 3rem;
+            padding: 1rem;
+
+            @include mobile {
+                position: absolute;
+                right: -8rem;
+                width: 190%;
+                letter-spacing: 1.2px;
+                top: 5%;
+            }
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        z-index: -1;
+        width: 400px;
+        border-radius: 3rem;
+    }
+}
+
+#photo_1 {
+    top: 40%;
+    left: -14rem;
+    transform: rotate(10deg);
+
+    @include mobile {
+        left: -8rem;
+    }
+}
+
+#photo_2 {
+    top: 5%;
+    right: -14rem;
+    transform: rotate(-10deg);
+    @include mobile {
+        @include hide;
+    }
+}

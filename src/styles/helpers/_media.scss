@@ -1,0 +1,32 @@
+@use 'functions' as *;
+
+$mobile: 767.98;
+
+@mixin mobile {
+    @media (width <=rem($mobile)) {
+        @content;
+    }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+    @media (any-hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @if ($hasActiveEffectOnMobile) {
+        @media (any-hover: none) {
+            &:active {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin adaptive-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

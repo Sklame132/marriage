@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+
+    &_map {
+        width: 52.5vw;
+        height: 55vh;
+
+        @include mobile {
+            width: 75vw;
+        }
+
+        &-title {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(.75);
+    letter-spacing: 1.35;
+}
+
+[class*="balloon__content"] {
+    letter-spacing: .9px;
+}
